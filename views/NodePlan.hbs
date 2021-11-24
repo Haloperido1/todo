@@ -1,0 +1,1460 @@
+<body style="margin:0;background:#f4f4f4;font-family:Segoe UI">
+<style>
+    img {
+        max-width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2e70ab;
+    }
+
+    a:visited {
+        color: #822ec7;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    pre {
+        background-color: #3B4252;
+        color: #D8DEE9;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    :not(pre) > code {
+        background-color: #f0f0f0;
+        padding: 2px;
+        border: solid 1px #dadada;
+        border-radius: 4px;
+        font-size: 12;
+        color: #eb1c23;
+    }
+</style>
+<div style="max-width:850px;margin:25px auto;padding:25px 40px 40px;background:#fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24)">
+    <h1 style="margin:0;text-align:center;font-size:48px;text-transform:capitalize;font-weight:500;color:#4c4a6f">
+        Node.js Fundamentals</h1>
+    <hr style="display:block;width:90px;height:4px;margin:30px auto;content:;border:none;border-radius:3px;background:#4c4a6f"/>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js tutorial Stage 1
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0"><p>This theory provides basic knowledges about node.js.</p></div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Nodejs</li>
+                    <ul>
+                        <li>Core modules</li>
+                        <ul>
+                            <li>HTTP</li>
+                            <ul></ul>
+                            <li>Events</li>
+                            <ul></ul>
+                        </ul>
+                        <li>Core concept</li>
+                        <ul>
+                            <li>Logging</li>
+                            <ul></ul>
+                            <li>npx</li>
+                            <ul></ul>
+                        </ul>
+                        <li>process</li>
+                        <ul></ul>
+                        <li>Globals</li>
+                        <ul>
+                            <li>module</li>
+                            <ul>
+                                <li>module.exports</li>
+                                <ul></ul>
+                                <li>require</li>
+                                <ul></ul>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Materials</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><a href="https://nodejs.dev/learn">Node.js tutorial</a></li>
+                    <ul>
+                        <li><a href="https://nodejs.dev/learn/the-npx-nodejs-package-runner">npx</a></li>
+                        <li><a href="https://nodejs.dev/learn/how-to-log-an-object-in-nodejs">Logging</a></li>
+                        <li><a href="https://nodejs.dev/learn/the-nodejs-events-module">Events</a></li>
+                        <li><a href="https://nodejs.dev/learn/build-an-http-server">HTTP</a></li>
+                        <li><a href="https://nodejs.dev/learn/making-http-requests-with-nodejs">HTTP requests</a></li>
+                        <li><a href="https://nodejs.dev/learn/make-an-http-post-request-using-nodejs">HTTP POST</a></li>
+                        <li><a href="https://nodejs.dev/learn/get-http-request-body-data-using-nodejs">HTTP GET</a></li>
+                        <li><a href="https://nodejs.dev/learn/expose-functionality-from-a-nodejs-file-using-exports">Exports</a>
+                        </li>
+                        <li><a href="https://nodejs.dev/learn/understanding-process-nexttick">Process</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">2 h</p>
+                </div>
+                Node.js tutorial Stage 2
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0"><p>This theory provides basic knowledges about node.js.</p></div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Nodejs</li>
+                    <ul>
+                        <li>Core concept</li>
+                        <ul>
+                            <li>Node.js dependencies</li>
+                            <ul>
+                                <li>v8</li>
+                                <ul></ul>
+                                <li>npm</li>
+                                <ul></ul>
+                            </ul>
+                            <li>Event Loop</li>
+                            <ul>
+                                <li>Timers</li>
+                                <ul></ul>
+                            </ul>
+                            <li>Error handling</li>
+                            <ul></ul>
+                        </ul>
+                        <li>Core modules</li>
+                        <ul>
+                            <li>File System</li>
+                            <ul></ul>
+                            <li>REPL</li>
+                            <ul></ul>
+                            <li>Stream</li>
+                            <ul></ul>
+                            <li>Buffer</li>
+                            <ul></ul>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Materials</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><a href="https://nodejs.dev/learn">Node.js tutorial</a></li>
+                    <ul>
+                        <li><a href="https://nodejs.dev/learn/the-v8-javascript-engine">V8</a></li>
+                        <li><a href="https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager">NPM</a></li>
+                        <li><a href="https://nodejs.dev/learn/where-does-npm-install-the-packages">NPM installs</a></li>
+                        <li><a href="https://nodejs.dev/learn/how-to-use-or-execute-a-package-installed-using-npm">NPM
+                            using</a></li>
+                        <li><a href="https://nodejs.dev/learn/the-nodejs-event-loop">Event Loop</a></li>
+                        <li><a href="https://nodejs.dev/learn/discover-javascript-timers">Timers</a></li>
+                        <li><a href="https://nodejs.dev/learn/error-handling-in-nodejs">Error handling</a></li>
+                        <li><a href="https://nodejs.dev/learn/nodejs-buffers">Buffers</a></li>
+                        <li><a href="https://nodejs.dev/learn/nodejs-streams">Stream</a></li>
+                        <li><a href="https://nodejs.dev/learn/the-nodejs-fs-module">File System</a></li>
+                        <li><a href="https://nodejs.dev/learn/how-to-use-the-nodejs-repl">REPL</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js tutorial Stage 3
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0"><p>This theory provides basic knowledges about node.js.</p></div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Nodejs</li>
+                    <ul>
+                        <li>Nodejs with typescript</li>
+                        <ul></ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Materials</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><a href="https://nodejs.dev/learn">Node.js tutorial</a></li>
+                    <ul>
+                        <li><a href="https://nodejs.dev/learn/nodejs-with-typescript">Node.js with typescript</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">4 h</p>
+                </div>
+                The definitive Node.js handbook
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://medium.freecodecamp.org/the-definitive-node-js-handbook-6912378afc6e">
+            <p style="font-weight:500;font-size:20px;margin:10px 0">Learning fundamentals of Node.js</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1.2
+                    h</p></div>
+                Node.js Tutorial for Beginners
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8" href="https://www.youtube.com/watch?v=TlB_eWDSMt4"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">Learning fundamentals of Node.js.</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js guides. Getting started
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://nodejs.org/en/docs/guides/getting-started-guide/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The guide will help you get started with Node.js
+            apps and scripts.</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js guides. Debugging Guide
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://nodejs.org/en/docs/guides/debugging-getting-started/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The guide will help you get started debugging your
+            Node.js apps and scripts.</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js guides. Timers
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8" href="https://nodejs.org/en/docs/guides/timers-in-node/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The guide will help you get into timers in
+            Node.js</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">2 h</p>
+                </div>
+                Node.js guides. Event Loop
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The tutorial describes how event loop works</p></a>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js Streams
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93">
+            <p style="font-weight:500;font-size:20px;margin:10px 0">The article describes how Node.js steams work</p>
+        </a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js Child process
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://medium.freecodecamp.org/node-js-child-processes-everything-you-need-to-know-e69498fe970a">
+            <p style="font-weight:500;font-size:20px;margin:10px 0">The article describes how to work with child
+                processes</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">2 h</p>
+                </div>
+                Node.js Security
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://blog.risingstack.com/node-js-security-checklist/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The article describes how to secure you
+            application</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">2 h</p>
+                </div>
+                V8 Engine
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://hackernoon.com/javascript-v8-engine-explained-3f940148d4ef"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The article describes how V8 Engine works</p></a>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Garbage collector
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8" href="https://v8.dev/blog/trash-talk"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The article describes the garbage collector
+            works</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">2 h</p>
+                </div>
+                V8 Engine
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://hackernoon.com/javascript-v8-engine-explained-3f940148d4ef"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The article describes how to secure you
+            application</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Event loop queues
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://blog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810">
+            <p style="font-weight:500;font-size:20px;margin:10px 0">The article describes how the event loop works</p>
+        </a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Event loop in low level
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8" href="http://voidcanvas.com/nodejs-event-loop/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The article describes how the event loop works in
+            low level</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Observable sequences with RxJS in Node.js
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://www.freecodecamp.org/news/rxjs-and-node-8f4e0acebc7c/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">The article describes observable sequences with
+            RxJSl</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">15
+                    h</p></div>
+                Dad Joke API
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0">You need to build a simple command line tool which allows the user to make a
+                request to an
+                https://icanhazdadjoke.com/api API and store the data in a text file.
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Core Concept</li>
+                    <ul></ul>
+                    <li>Globals</li>
+                    <ul></ul>
+                    <li>Modules</li>
+                    <ul></ul>
+                    <li>Streams</li>
+                    <ul></ul>
+                    <li>Async Operations</li>
+                    <ul></ul>
+                    <li>NPM</li>
+                    <ul></ul>
+                    <li>Network</li>
+                    <ul></ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Requirements</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Use only built-in Node.js modules to perform requests to an API and working with streaming
+                        data.
+                    </li>
+                </ul>
+            </div>
+            <div style="margin:10px 0">
+                <html>
+                <head></head>
+                <body><p>This application should accept following command line arguments using process.argv:</p>
+                <ol>
+                    <li>&quot;searchTerm&quot; - the command line arguments should accept search term argument and your
+                        application should make an API
+                        request to the dad joke API to search for a joke based on the search term. If it finds jokes
+                        matching the term, it
+                        should output a random joke among all pages returned by the request, and should also save the
+                        joke to a file called
+                        jokes.json. If it doesn&#x27;t find a joke, it should log a message to the console telling the
+                        user that no jokes were
+                        found for that search term
+                    </li>
+                    <li>&quot;leaderboard&quot; - the command line arguments should accept leaderboard argument. If that
+                        command line argument is
+                        passed in, your application should return the most popular joke based on how many times it
+                        appears in jokes.json
+                    </li>
+                </ol>
+                <p>An example of running the app with command line arguments:</p>
+                <ul>
+                    <li>testApp --searchTearm &#x27;hipster&#x27;</li>
+                    <li>testApp --leaderboard</li>
+                </ul>
+                <p>You have to use only the following NODE.js modules <strong>(do not apply to advanced
+                    requirements)</strong>:</p>
+                <ol>
+                    <li>fs - for reading and writing to a file</li>
+                    <li>process - for gathering arguments from the command line</li>
+                    <li>https - for making API requests</li>
+                </ol>
+                </body>
+                </html>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Node.js Streams
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93">
+            <p style="font-weight:500;font-size:20px;margin:10px 0">Learning Node.js Streams.</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">40
+                    h</p></div>
+                Csv to json parser
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0">You need to build a command line tool which allows the user to convert CSV files
+                to JSON.
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Core Concept</li>
+                    <ul></ul>
+                    <li>Event Loop</li>
+                    <ul></ul>
+                    <li>Globals</li>
+                    <ul></ul>
+                    <li>Modules</li>
+                    <ul></ul>
+                    <li>Streams</li>
+                    <ul></ul>
+                    <li>Async Operations</li>
+                    <ul></ul>
+                    <li>NPM</li>
+                    <ul></ul>
+                    <li>Network</li>
+                    <ul></ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Requirements</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Use only built-in Node.js modules to perform requests to an API and working with streaming
+                        data.
+                    </li>
+                </ul>
+            </div>
+            <div style="margin:10px 0">
+                <html>
+                <head></head>
+                <body><p>You need to build an npm package for parsing CSV files to JSON by implementing a custom NODE.js
+                    <strong>transform</strong> stream
+                    with the following abilities:</p>
+                <ol>
+                    <li>Set or automatically detect the separator that is used for parsing (use &quot;auto-detect&quot;
+                        by default if no separator
+                        provided)
+                    </li>
+                    <li>Upload result JSON file to Google Drive disk</li>
+                    <li>Provide errors handling for converting process and incorrect command line arguments.</li>
+                </ol>
+                <p>This application should accept following command line arguments using process.argv:</p>
+                <ol>
+                    <li>&quot;sourceFile&quot; - path to the csv file that need to be converted.</li>
+                    <li>&quot;resultFile&quot; - path to the result json file.</li>
+                    <li>&quot;separator&quot; - separator that is used while converting.</li>
+                </ol>
+                <p>An example of running the app with command line arguments:</p>
+                <ul>
+                    <li>csvToJson --sourceFile &quot;D:\source.csv&quot; --resultFile &quot;D:\result.json&quot;
+                        --separator &quot;,&quot;
+                    </li>
+                    <li>csvToJson --sourceFile &quot;D:\source.csv&quot; --resultFile &quot;D:\result.json&quot;
+                        --separator &quot; &quot;
+                    </li>
+                    <li>csvToJson --sourceFile &quot;D:\source.csv&quot; --resultFile &quot;D:\result.json&quot;</li>
+                </ul>
+                <p>To test your code write a function that generates at least 10 gigabyte CSV file base on the filled in
+                    with
+                    <a href="http://demo.itechart-group.com:13080/assets/4afda6d17ecc3c89368ca07f58ce4d6b3c56e724dbf93b292dc14c8d061da6bb.csv">mock
+                        csv file</a>
+                    Generate a CSV file and use it as an source file for your tool. When running the parser <strong>pay
+                        attention to the RAM</strong>
+                    that is taken by the process.</p>
+                <p>Add version, name, description, and author of the package in package.json. Publish the package you
+                    created to the npm
+                    registry.</p></body>
+                </html>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

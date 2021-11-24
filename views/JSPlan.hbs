@@ -1,0 +1,1031 @@
+<div style="max-width:850px;margin:25px auto;padding:25px 40px 40px;background:#fff;box-shadow:0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24)">
+    <h1 class="plan-item-header_main__title">
+        JavaScript Fundamentals</h1>
+    <hr style="display:block;width:90px;height:4px;margin:30px auto;content:;border:none;border-radius:3px;background:#4c4a6f"/>
+    <div style="margin:5px auto">
+
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container">
+                    <p class="plan-item-header__estimation-text">
+                        24 h
+                    </p>
+                </div>
+                JS Fundamentals tutorial (Stage 1)
+            </h1>
+        </div>
+        <div>
+            <h3 style="color:#636363;
+        font-weight:500;
+        font-size:20px;
+        margin:10px 0">
+                Short Description
+            </h3>
+            <div style="margin:10px 0">
+                <p>
+                    This theory provides basic knowledge about JS language, its syntax,
+                    type system, functions, classes, and explains the main concept of script execution.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3 style="color:#636363;
+        font-weight:500;
+        font-size:20px;
+        margin:10px 0">
+                Topics
+            </h3>
+            <div>
+                <form action="/jsplan" method="post">
+                    <ul>
+                        {{#each JSPlan}}
+                            <li>
+                                <label>
+                                    <input type="checkbox" {{#if completed}}checked{{/if}} name="{{_id}}">
+                                    <span {{#if completed}} class="completed"{{/if}}>
+                                        {{title}}
+                                        {{#if subtitles}}
+                                            <ul>
+                                                {{#each subtitles}}
+                                                    <li>
+                                                        <label>
+                                                            <input type="checkbox" {{#if completed}}checked{{/if}}
+                                                                   name="{{_id}}">
+                                                            <span {{#if status}} class="completed"{{/if}}>
+                                                                {{subtitle}}
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                {{/each}}
+                                            </ul>
+                                        {{/if}}
+                                    </span>
+                                </label>
+                            </li>
+
+                        {{/each}}
+                    </ul>
+                    <button class="btn btn-small" type="submit">Save</button>
+
+                </form>
+            </div>
+
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Materials</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><a href="https://javascript.info/">JS tutorial</a></li>
+                    <ul>
+                        <li><a href="https://javascript.info/variables">Variables</a></li>
+                        <li><a href="https://javascript.info/operators">
+                            Basic operators (maths)</a></li>
+                        <li><a href="https://javascript.info/logical-operators">Logical operators</a></li>
+                        <li><a href="https://javascript.info/ifelse">Conditional operators</a></li>
+                        <li><a href="https://javascript.info/nullish-coalescing-operator">Nullish coalescing
+                            operator</a></li>
+                        <li><a href="https://javascript.info/comparison">Comparisons</a></li>
+                        <li><a href="https://javascript.info/switch">Switch statement</a></li>
+                        <li><a href="https://javascript.info/while-for">Loops</a></li>
+                        <li><a href="https://javascript.info/types">Data types</a></li>
+                        <li><a href="https://javascript.info/type-conversions">Type conventions</a></li>
+                        <li><a href="https://javascript.info/function-basics">Function</a></li>
+                        <li><a href="https://javascript.info/function-expressions">Function expressions</a></li>
+                        <li><a href="https://javascript.info/arrow-functions-basics">Arrow functions</a></li>
+                        <li><a href="https://javascript.info/closure">Closure and Lexical Environment</a></li>
+                        <li><a href="https://javascript.info/var">Hoisting</a></li>
+                        <li><a href="https://javascript.info/object">Objects</a></li>
+                        <li><a href="https://javascript.info/object-methods">Object methods and &quot;this&quot;</a>
+                        </li>
+                        <li><a href="https://javascript.info/constructor-new">Constructor and operator
+                            &quot;new&quot;</a></li>
+                        <li><a href="https://javascript.info/global-object">Global object</a></li>
+                        <li><a href="hhttps://javascript.info/function-object">Function object</a></li>
+                        <li><a href="hhttps://javascript.info/prototype-inheritance">Prototypal inheritance</a></li>
+                        <li><a href="https://javascript.info/function-prototype">F.prototype</a></li>
+                        <li><a href="https://javascript.info/class">Class syntax</a></li>
+                        <li><a href="https://javascript.info/class-inheritance">Class inheritance</a></li>
+                        <li><a href="https://javascript.info/static-properties-methods">Static properties and
+                            methods</a></li>
+                        <li><a href="https://javascript.info/private-protected-properties-methods">Private and protected
+                            properties and methods</a></li>
+                        <li><a href="https://javascript.info/instanceof">The instanceof operator</a></li>
+                        <li><a href="https://javascript.info/settimeout-setinterval">setTimeout and setInterval</a></li>
+                        <li><a href="https://javascript.info/callbacks">Callbacks</a></li>
+                        <li><a href="https://javascript.info/promise-basics">Promises</a></li>
+                        <li><a href="https://javascript.info/async-await">Async/await</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">16
+                    h</p></div>
+                JS Fundamentals tutorial (Stage 2)
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0"><p>This theory provides some extra information about JS language including data
+                type system,
+                function, execution, prototype inheritance, error handling and etc.</p></div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Type System</li>
+                    <ul>
+                        <li>Data Types</li>
+                        <ul>
+                            <li>Strings</li>
+                            <ul></ul>
+                            <li>Destructuring assignment</li>
+                            <ul></ul>
+                            <li>Map and Set</li>
+                            <ul></ul>
+                            <li>Arrays</li>
+                            <ul></ul>
+                            <li>Date and time</li>
+                            <ul></ul>
+                            <li>Numbers</li>
+                            <ul></ul>
+                            <li>Methods of primitives</li>
+                            <ul></ul>
+                            <li>Array methods</li>
+                            <ul></ul>
+                        </ul>
+                    </ul>
+                    <li>Scopes, Closures and Functions</li>
+                    <ul>
+                        <li>Currying</li>
+                        <ul></ul>
+                        <li>Functions</li>
+                        <ul>
+                            <li>Expression and Declaration</li>
+                            <ul></ul>
+                            <li>Bind, call, apply</li>
+                            <ul></ul>
+                            <li>Rest parameters and spread syntax</li>
+                            <ul></ul>
+                        </ul>
+                    </ul>
+                    <li>Objects and Classes</li>
+                    <ul>
+                        <li>Native prototypes</li>
+                        <ul></ul>
+                        <li>Prototype methods</li>
+                        <ul></ul>
+                        <li>Property getters and setters</li>
+                        <ul></ul>
+                        <li>Chaining</li>
+                        <ul></ul>
+                        <li>Extending built-in classes</li>
+                        <ul></ul>
+                        <li>Property flags and descriptors</li>
+                        <ul></ul>
+                        <li>Object to primitive conversion</li>
+                        <ul></ul>
+                    </ul>
+                    <li>Async</li>
+                    <ul>
+                        <li>Promise API</li>
+                        <ul></ul>
+                        <li>Generators</li>
+                        <ul>
+                            <li>Async iterators</li>
+                            <ul></ul>
+                            <li>Async generators</li>
+                            <ul></ul>
+                        </ul>
+                        <li>Promise chaining</li>
+                        <ul></ul>
+                    </ul>
+                    <li>Execution</li>
+                    <ul>
+                        <li>Strict Mode</li>
+                        <ul></ul>
+                        <li>Eval</li>
+                        <ul></ul>
+                        <li>Garbage Collection</li>
+                        <ul></ul>
+                    </ul>
+                    <li>Error handling</li>
+                    <ul>
+                        <li>Custom errors</li>
+                        <ul></ul>
+                        <li>Error class</li>
+                        <ul></ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Materials</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><a href="https://javascript.info/">JS tutorial</a></li>
+                    <ul>
+                        <li><a href="https://javascript.info/primitives-methods">Methods of primitives</a></li>
+                        <li><a href="https://javascript.info/number">Numbers</a></li>
+                        <li><a href="https://javascript.info/string">Strings</a></li>
+                        <li><a href="https://javascript.info/date">Date and time</a></li>
+                        <li><a href="https://javascript.info/array">Arrays</a></li>
+                        <li><a href="https://javascript.info/array-methods">Array methods</a></li>
+                        <li><a href="https://javascript.info/map-set">Map and Set</a></li>
+                        <li><a href="https://javascript.info/destructuring-assignment">Destructuring assignment</a></li>
+                        <li><a href="https://javascript.info/reference-type">Reference Type</a></li>
+                        <li><a href="https://javascript.info/bind">Bind</a></li>
+                        <li><a href="https://javascript.info/call-apply-decorators">Call and apply</a></li>
+                        <li><a href="https://javascript.info/rest-parameters-spread">Rest parameters and spread
+                            syntax</a></li>
+                        <li><a href="https://javascript.info/currying-partials">Currying</a></li>
+                        <li><a href="https://javascript.info/object-copy">Object references and copying</a></li>
+                        <li><a href="https://javascript.info/object-toprimitive">Object to primitive conversion</a></li>
+                        <li><a href="https://javascript.info/property-descriptors">Property flags and descriptors</a>
+                        </li>
+                        <li><a href="https://javascript.info/property-accessors">Property getters and setters</a></li>
+                        <li><a href="https://javascript.info/native-prototypes">Native prototypes</a></li>
+                        <li><a href="https://javascript.info/prototype-methods">Prototype methods</a></li>
+                        <li><a href="https://javascript.info/extend-natives">Extending built-in classes</a></li>
+                        <li><a href="https://javascript.info/optional-chaining">Optional chaining</a></li>
+                        <li><a href="https://javascript.info/promise-api">Promise API</a></li>
+                        <li><a href="https://javascript.info/promise-chaining">Promise chaining</a></li>
+                        <li><a href="https://javascript.info/generators">Generators</a></li>
+                        <li><a href="https://javascript.info/async-iterators-generators">Async iterators and
+                            generators</a></li>
+                        <li><a href="https://javascript.info/strict-mode">Strict mode</a></li>
+                        <li><a href="https://javascript.info/garbage-collection">Garbage Collection</a></li>
+                        <li><a href="https://javascript.info/eval">Eval</a></li>
+                        <li><a href="https://javascript.info/try-catch">Error handling</a></li>
+                        <li><a href="https://javascript.info/custom-errors">Custom errors, extending Error</a></li>
+                        <li><a href="https://javascript.info/promise-error-handling">Error handling with promises</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">10
+                    h</p></div>
+                JS Fundamentals tutorial (Stage 3)
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0"><p>This theory provides advanced knowledge about JS language.</p></div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Type System</li>
+                    <ul>
+                        <li>Data Types</li>
+                        <ul>
+                            <li>BigInt</li>
+                            <ul></ul>
+                            <li>Object.keys, values, entries</li>
+                            <ul></ul>
+                            <li>Symbols</li>
+                            <ul></ul>
+                            <li>JSON methods, toJSON</li>
+                            <ul></ul>
+                            <li>WeakMap and WeakSet</li>
+                            <ul></ul>
+                            <li>Iterables</li>
+                            <ul></ul>
+                        </ul>
+                    </ul>
+                    <li>Scopes, Closures and Functions</li>
+                    <ul>
+                        <li>Functions</li>
+                        <ul>
+                            <li>Arrow functions revisited</li>
+                            <ul></ul>
+                            <li>Recursion and stack</li>
+                            <ul></ul>
+                        </ul>
+                    </ul>
+                    <li>Objects and Classes</li>
+                    <ul>
+                        <li>Mixins</li>
+                        <ul></ul>
+                        <li>Proxy and Reflect</li>
+                        <ul></ul>
+                    </ul>
+                    <li>Async</li>
+                    <ul>
+                        <li>Promisification</li>
+                        <ul></ul>
+                        <li>Microtasks</li>
+                        <ul></ul>
+                    </ul>
+                    <li>Modules</li>
+                    <ul>
+                        <li>Export and import</li>
+                        <ul></ul>
+                        <li>Dynamic imports</li>
+                        <ul></ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Materials</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><a href="https://javascript.info/">JS tutorial</a></li>
+                    <ul>
+                        <li><a href="https://javascript.info/bigint">BigInt</a></li>
+                        <li><a href="https://javascript.info/symbol">Symbols</a></li>
+                        <li><a href="https://javascript.info/iterable">Iterables</a></li>
+                        <li><a href="https://javascript.info/weakmap-weakset">WeakMap and WeakSet</a></li>
+                        <li><a href="https://javascript.info/keys-values-entries">Object.keys with values and
+                            entries</a></li>
+                        <li><a href="https://javascript.info/json">JSON methods</a></li>
+                        <li><a href="https://javascript.info/recursion">Recursion and stack</a></li>
+                        <li><a href="https://javascript.info/new-function">The &quot;new Function&quot; syntax</a></li>
+                        <li><a href="https://javascript.info/arrow-functions">Arrow functions</a></li>
+                        <li><a href="https://javascript.info/mixins">Mixins</a></li>
+                        <li><a href="https://javascript.info/proxy">Proxy and Reflect</a></li>
+                        <li><a href="https://javascript.info/promisify">Promisification</a></li>
+                        <li><a href="https://javascript.info/microtask-queue">Microtasks</a></li>
+                        <li><a href="https://javascript.info/modules-intro">Modules</a></li>
+                        <li><a href="https://javascript.info/import-export">Export and Import</a></li>
+                        <li><a href="https://javascript.info/modules-dynamic-imports">Dynamic imports</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">8 h</p>
+                </div>
+                ES 6 in Depth
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8" href="https://ponyfoo.com/articles/tagged/es6-in-depth"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">A series of articles on ES2015.</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">1 h</p>
+                </div>
+                Tasks and microtasks
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">Tasks, microtasks, queues and schedules.</p></a>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">5 h</p>
+                </div>
+                Javascript Fundamentals
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8"
+                                      href="https://www.pluralsight.com/courses/javascript-fundamentals"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">JS Fundamental Pluralsight course.</p></a></div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">0.5
+                    h</p></div>
+                Event Loop
+            </h1>
+        </div>
+        <div style="margin:10px 0"><a style="color:#3d7eb8" href="https://www.youtube.com/watch?v=8aGhZQkoFbQ"><p
+                style="font-weight:500;font-size:20px;margin:10px 0">What the heck is the event loop anyway?</p></a>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <style>
+            .plan-item-header {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                height: fit-content;
+            }
+
+            .plan-item-header::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #4c4a6f;
+            }
+
+            .plan-item-header__title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 500;
+                color: #4c4a6f;
+            }
+
+            .plan-item-header__estimation-container {
+                background-color: #4c4a6f;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90px;
+                float: left;
+            }
+
+            .plan-item-header__estimation-text {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 10px 3px;
+                color: #FFFFFF;
+            }
+        </style>
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">16
+                    h</p></div>
+                Functional Mini Library
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0">You are to implement a functional library.</div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Functional Programming</li>
+                    <ul></ul>
+                    <li>JS Types</li>
+                    <ul></ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3>Requirements</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Code style</li>
+                    <li>No bundling and modules</li>
+                </ul>
+            </div>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><p>The library should provide the following functionality:</p>
+                        <ol>
+                            <li><code>bool isArray(obj)</code></li>
+                            <li><code>bool isBoolean(obj)</code></li>
+                            <li><code>bool isDate(obj)</code></li>
+                            <li><code>bool isNumber(obj)</code></li>
+                            <li><code>bool isString(obj)</code></li>
+                            <li><code>bool isFunction(obj)</code></li>
+                            <li><code>bool isUndefined(obj)</code></li>
+                            <li><code>bool isNull(obj)</code></li>
+                        </ol>
+                    </li>
+                    <li><p>Working with arrays:</p>
+                        <ol>
+                            <li><code>obj first(arr)</code></li>
+                            <li><code>obj last(arr)</code></li>
+                            <li><code>newArr skip(arr, number)</code></li>
+                            <li><code>newArr take(arr, number)</code></li>
+                        </ol>
+                    </li>
+                    <li><p>Chaining:
+                        Implement the ability to create chains:
+                        <code>asChain(arr).skip(func).take(func)</code></p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">20
+                    h</p></div>
+                Array Library
+            </h1>
+        </div>
+        <div><h3>Short Description</h3>
+            <div style="margin:10px 0">You are to implement a functional library for working with arrays.</div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Closure</li>
+                    <ul></ul>
+                    <li>&quot;this&quot; keyword</li>
+                    <ul></ul>
+                    <li>Functional Programming</li>
+                    <ul></ul>
+                    <li>ES6 features</li>
+                    <ul></ul>
+                    <li>Memoization</li>
+                    <ul></ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3>Requirements</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Code style</li>
+                    <li>No bundling and modules</li>
+                </ul>
+            </div>
+            <div style="margin:10px 0">
+                <ul>
+                    <li><p>The library should provide the following functionality:</p>
+                        <p><code>1. take(array, n)</code></p>
+                        <p><code>2. skip(array, n)</code></p>
+                        <p><code>3. map(array, callback)</code></p>
+                        <p><code>4. reduce(array, callback, initialValue)</code></p>
+                        <p><code>5. filter(array, callback)</code></p>
+                        <p><code>6. foreach(array, callback)</code></p>
+                        <p>Here is an example of calling:</p>
+                        <p><code>nameOfYourLibrary.take([1, 2, 3, 4], 2)</code> will return <code>[1, 2]</code></p>
+                        <p>The rest of the functions work the same way.</p>
+                        <p><code>nameOfYourLibrary.map([1, 2, 3], a =&gt; a * 2 )</code> will return <code>[2, 4,
+                            6]</code></p></li>
+                    <li><p>After finishing the implementation of these methods, you should implement new
+                        <code>chain</code> and <code>value</code> functions, which
+                        will allow using the library in the following way:</p>
+                        <p><code>arrayLib.chain([1, 2, 3]).take(2).skip(1).value()</code> will return <code>[2]</code>
+                        </p>
+                        <p><strong>NOTE: it should still be possible to call the function in the old way.</strong></p>
+                    </li>
+                    <li><p>First, you should implement the library using ES5, after completing the <code>chain</code>
+                        and <code>value</code> functions, the same task
+                        should be implemented with ES6.</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">20
+                    h</p></div>
+                Logger
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0">You are to create your own logger.</div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Execution context</li>
+                    <ul></ul>
+                    <li>Inheritance</li>
+                    <ul></ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Requirements</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Code style</li>
+                    <li>No bundling and modules</li>
+                </ul>
+            </div>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Create a simple logger function that logs a message in the console (message is a parameter).
+                        <ul>
+                            <li>Example of execution:
+                                <code>log(&quot;Hello World!&quot;);</code></li>
+                            <li>Example of output:
+                                <code>Hello World!</code></li>
+                        </ul>
+                    </li>
+                    <li>Create another logger function that uses the previous one, and logs table-view row in console
+                        (column values are
+                        parameters).
+                        <ul>
+                            <li>Example of execution:
+                                <code>log(&quot;Hello&quot;, &quot;World&quot;, &quot;!&quot;);</code></li>
+                            <li>Example of output:
+                                <code>Hello | World | !</code></li>
+                        </ul>
+                    </li>
+                    <li>Create another logger function that uses the previous one, and logs table-view row in the
+                        console (the first column is
+                        the current date and time by default, another column values are parameters).
+                        <ul>
+                            <li>Example of execution:
+                                <code>log(&quot;Hello&quot;, &quot;World&quot;, &quot;!&quot;);</code></li>
+                            <li>Example of output:
+                                <code>12/16/2016, 2:35:02 PM | Hello | World | !</code></li>
+                        </ul>
+                    </li>
+                    <li>Make 3 previous methods as method &quot;log&quot; of objects <code>BaseLogger</code>, <code>TableLogger</code>,
+                        and <code>TableTimeLogger</code>. Implement
+                        inheritance of objects using all known JS Inheritance patterns.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin:5px auto">
+
+        <div class="plan-item-header">
+            <h1 class="plan-item-header__title">
+                <div class="plan-item-header__estimation-container"><p class="plan-item-header__estimation-text">40
+                    h</p></div>
+                Function Puzzles
+            </h1>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Short Description</h3>
+            <div style="margin:10px 0">You are to solve some functional puzzles.</div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Topics</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Functional Programming</li>
+                    <ul></ul>
+                    <li>JS Types</li>
+                    <ul></ul>
+                    <li>&quot;this&quot; keyword</li>
+                    <ul></ul>
+                    <li>Currying</li>
+                    <ul></ul>
+                    <li>Partial Application</li>
+                    <ul></ul>
+                    <li>Linear Fold</li>
+                    <ul></ul>
+                    <li>Lazy Evaluation</li>
+                    <ul></ul>
+                    <li>Memoization</li>
+                    <ul></ul>
+                </ul>
+            </div>
+        </div>
+        <div><h3 style="color:#636363;font-weight:500;font-size:20px;margin:10px 0">Requirements</h3>
+            <div style="margin:10px 0">
+                <ul>
+                    <li>Code style</li>
+                    <li>No bundling and modules</li>
+                </ul>
+            </div>
+            <div style="margin:10px 0"><h3 id="problem-1-partial-application">Problem 1: Partial Application</h3>
+                <p>Implement function F that allows doing partial function application in a form of:
+                    <code>G(x, y, z ... ) = N</code><code>F(x, G(x, y, z ... )) → H(y, z ... ) = N</code></p>
+                <p><code>F</code> should accept any number of parameters to apply.
+                    <code>G</code> may accept any number of parameters.
+                    Is there any JavaScript built-in alternative?</p>
+                <p>In order to solve this problem you have to be familiar with the next concepts:</p>
+                <ol>
+                    <li>Partial Application</li>
+                    <li>High-order and First-class functions</li>
+                    <li>Activation Object and handling of a variable number of function arguments</li>
+                </ol>
+                <h3 id="problem-2-currying">Problem 2: Currying</h3>
+                <p>Implement function curry that allows doing currying like:
+                    <code>f(x, y, z) = N</code><code>curry(f) = x → (y → (z → N))</code></p>
+                <p>Function <code>f</code> may accept any number of explicit parameters.
+                    Implicit parameters are not subject to <code>curry</code>.
+                    How is it differ from Partial Application?</p>
+                <p>In order to solve this problem you have to be familiar with the next concepts:</p>
+                <ol>
+                    <li>Currying and Partial Application</li>
+                    <li>High-order and First-class functions</li>
+                    <li>Activation Object and handling of a variable number of function arguments</li>
+                </ol>
+                <h3 id="problem-3-linear-fold">Problem 3: Linear fold</h3>
+                <p>Implement a linear fold function that works on arrays:
+                    <code>F(array, callback[, initialValue])</code><code>array</code> is the array fold was called upon.
+                    <code>callback</code> is a function to execute on each value in the array, taking four arguments:
+                </p>
+                <ul>
+                    <li><code>previousValue</code> - the value previously returned in the last invocation of the
+                        callback, or initialValue, if supplied.
+                    </li>
+                    <li><code>currentValue</code> - the current element being processed in the array.</li>
+                    <li><code>index</code> - the index of the current element being processed in the array.</li>
+                    <li><code>initialValue</code> - object to use as the first argument to the first call of the
+                        callback.
+                    </li>
+                </ul>
+                <p>Does ES5 has a built-in alternative?</p>
+                <p>In order to solve this problem you have to be familiar with the next concepts:</p>
+                <ol>
+                    <li>Folding and unfolding</li>
+                    <li>High-order and First-class functions</li>
+                </ol>
+                <h3 id="problem-4-map">Problem 4: Map</h3>
+                <p>Implement a function that creates a new array with the results of calling a provided function on
+                    every element in this
+                    array.</p>
+                <p>Does ES5 has a built-in alternative?</p>
+                <p>In order to solve this problem you have to be familiar with next concepts:</p>
+                <ol>
+                    <li>Functional Map</li>
+                    <li>High-order and First-class functions</li>
+                </ol>
+                <h3 id="problem-5-filter">Problem 5: Filter</h3>
+                <p>Implement a function that filters array based on callback result.</p>
+                <p>Does ES5 has a built-in alternative?</p>
+                <p>In order to solve this problem you have to be familiar with next concepts:</p>
+                <ol>
+                    <li>High-order and First-class functions</li>
+                </ol>
+                <h3 id="problem-6-average-of-even-numbers">Problem 6: Average of even numbers</h3>
+                <p>Given an array of numbers, find the average of even ones using functions implemented for previous
+                    problems.</p>
+                <p>Example: <code>[1, 23, 2, 6, 12, 0] -&gt; (2 + 6 + 12 + 0) / 4 = 5</code></p>
+                <p>In order to solve this problem, you have to solve 1-6 problems.</p>
+                <h3 id="problem-7-lazy-evaluation">Problem 7: Lazy evaluation</h3>
+                <p>Implement a function that takes a list of parameters and makes any given function lazy.</p>
+                <p>In order to solve this problem you have to be familiar with the next concepts:</p>
+                <ol>
+                    <li>High-order and First-class functions</li>
+                </ol>
+                <h3 id="problem-8-memoization">Problem 8: Memoization</h3>
+                <p>Implement a function that for any given function <code>F</code> produces function <code>G</code> that
+                    caches its previous calling results.</p>
+                <ul>
+                    <li>Function <code>F</code> accepts a single explicit parameter.</li>
+                    <li>Implicit parameters should not be taken into account.</li>
+                    <li>Watch out for NaN, undefined and circular references.</li>
+                </ul>
+                <p>In order to solve this problem you have to be familiar with the next concepts:</p>
+                <ol>
+                    <li>Memoization</li>
+                    <li>High-order and First-class functions</li>
+                </ol>
+                <h3 id="problem-9-inheritance">Problem 9: Inheritance</h3>
+                <p>Make hierarchy of geometric figures: base Shape class inherited Rectangle and Square classes.</p>
+                <p>The rectangle should have &quot;width&quot; and &quot;height&quot; properties. Square should have
+                    &quot;sideLength&quot; property. Also, each shape
+                    has &quot;name&quot; property and methods to calculate perimeter and area. Make ShapesStore which
+                    contains shapes. It should have
+                    a method which returns the total perimeter of all rectangles and method which return total area of
+                    all squares which
+                    contained in it.</p>
+                <h3 id="problem-10-function-with-any-number-of-parameters">Problem 10: Function with any number of
+                    parameters</h3>
+                <p>Write a function that will calculate the multiplication of all parameters that were passed into the
+                    function.</p></div>
+        </div>
+    </div>
+</div>
